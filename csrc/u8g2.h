@@ -59,7 +59,7 @@
 #define U8G2_H
 
 #include "u8x8.h"
-
+#include "esp_attr.h"
 /*
   The following macro enables 16 Bit mode. 
   Without defining this macro all calulations are done with 8 Bit (1 Byte) variables.
@@ -77,7 +77,7 @@
   Before using any display functions, the dynamic buffer *must* be assigned to the u8g2 struct using the u8g2_SetBufferPtr function.
   When using dynamic allocation, the stack size must be increased by u8g2_GetBufferSize bytes.
  */
-//#define U8G2_USE_DYNAMIC_ALLOC
+#define U8G2_USE_DYNAMIC_ALLOC
 
 
 /* U8g2 feature selection, see also https://github.com/olikraus/u8g2/wiki/u8g2optimization */
@@ -154,7 +154,7 @@
 #  define U8G2_NOINLINE
 #endif
 
-#define U8G2_FONT_SECTION(name) U8X8_FONT_SECTION(name) 
+#define U8G2_FONT_SECTION(name) U8X8_FONT_SECTION(name)
 
 
 /* the macro U8G2_USE_LARGE_FONTS enables large fonts (>32K) */
