@@ -104,6 +104,7 @@ struct controller controller_list[] =
     "", /* is_generate_u8g2_class= */ 1,
     {
       { "128x64_adafruit" },
+      { "128x64_raystar" },
       { NULL }
     }
   },
@@ -112,6 +113,16 @@ struct controller controller_list[] =
     "", /* is_generate_u8g2_class= */ 1,
     {
       { "128x64_adafruit" },
+      { "128x64_raystar" },
+      { NULL }
+    }
+  },
+
+  {
+    "ssd1306", 	255,  2, 	"u8g2_ll_hvline_vertical_top_lsb", "u8x8_cad_001", "", COM_4WSPI|COM_3WSPI|COM_6800|COM_8080,
+    "", /* is_generate_u8g2_class= */ 1,
+    {
+      { "2040x16" },
       { NULL }
     }
   },
@@ -939,6 +950,22 @@ struct controller controller_list[] =
     }
   },
 
+  {
+    "st7528", 		20, 	8, 	"u8g2_ll_hvline_vertical_top_lsb", "u8x8_cad_001", "", COM_4WSPI|COM_6800|COM_8080,
+    "", /* is_generate_u8g2_class= */ 1,
+    {
+      { "erc16064" },
+      { NULL }
+    }
+  },
+  {
+    "st7528", 		20, 	8, 	"u8g2_ll_hvline_vertical_top_lsb", "u8x8_cad_ssd13xx_i2c", "i2c", COM_I2C,
+    "", /* is_generate_u8g2_class= */ 1,
+    {
+      { "erc16064" },
+      { NULL }
+    }
+  },
   
 
   
@@ -968,6 +995,7 @@ struct controller controller_list[] =
       { "64128n" },       
       { "zolen_128x64" },
       { "lm6059" },
+      { "ks0713" },	/* KS0713 chip, which seems to be almost compatible to ST7565 */
       { "lx12864" },
       { "erc12864" },
       { "erc12864_alt" },	/* issue 790 */
